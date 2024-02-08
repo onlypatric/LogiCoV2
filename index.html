@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="user">
+                <div class="user-name">LogiCo</div>
+                <a href="mailto:info@logicaecontrollo.com" class="user-mail">info@logicaecontrollo.com</a>
+            </div>
+            <div class="sidebar-menu">
+                <a href="https://www.logicaecontrollo.com/" class="sidebar-menu__link">Home Page</a>
+                <a href="https://www.logicaecontrollo.com/life-cycle.php" class="sidebar-menu__link">Life Cycle</a>
+                <a href="https://www.logicaecontrollo.com/line-control.php" class="sidebar-menu__link">Programmazione</a>
+                <a href="https://www.logicaecontrollo.com/automazioni.php" class="sidebar-menu__link">Automazioni</a>
+                <a href="https://www.logicaecontrollo.com/controllo-etichetta.php" class="sidebar-menu__link">Controllo Etichetta</a>
+                <a href="#" class="sidebar-menu__link active">Il risultato</a>
+                <a href="https://www.logicaecontrollo.com/contatti.php" class="sidebar-menu__link">Contatti</a>
+            </div>
+
+            <!--
+            <label class="toggle">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>-->
+        </div>
+        <div class="main">
+            <div class="main-header">
+                <div class="main-header__title">Il risultato</div>
+
+                <button class="main-header__add">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="main-content">
+                <!--
+                    <div class="card card-3 card-img"></div>
+                    <div class="card card-img card-1 card-main"></div>
+                    <div class="card card-4 card-img"></div>
+                    <div class="card card-img card-5"></div>
+                    <div class="card card-6 card-img"></div>
+                -->
+                <p>Ci specializziamo nella costruzione di quadri elettrici per automatizzare la catena di produzione, dallo spacchettamento, alla incanalazione, al raggruppamento fino all'impacchettamento, grazie anche ai controlli che offriamo riusciamo ad offrire un servizio 360° per la logica e il controllo delle linee di produzione.</p>
+                <div class="flex-content">
+                    <div class="text-flex">
+                        <h2>Quando arriva il pallet</h2>
+                        <p>Il pallet viene automaticamente aperto, togliendo eventuali cornici e film che lo ricoprono, tutto il prodotto viene instradato verso la catena</p>
+                        <div class="short-card"></div>
+                    </div>
+                    <div class="card card-img media-flex">
+                        <video autoplay muted loop>
+                            <source src="spacchettamento.mp4" srcset="">
+                        </video>
+                    </div>
+                </div>
+                <div class="flex-content">
+                    <div class="card card-img media-flex">
+                        <video autoplay muted loop>
+                            <source src="bottiglie.mp4" srcset="">
+                        </video>
+                    </div>
+                    <div class="text-flex">
+                        <h2>Vengono prese tutte le bottiglie</h2>
+                        <p>Le bottiglie vengono prese e portate da gruppi a una singola linea continua.</p>
+                        <div class="short-card"></div>
+                    </div>
+                </div>
+                <div class="flex-content">
+                    <div class="card card-img media-flex">
+                        <video autoplay muted loop>
+                            <source src="controlli.mp4" srcset="">
+                        </video>
+                    </div>
+                    <div class="text-flex">
+                        <h2>Le bottiglie vengono controllate</h2>
+                        <p>Le bottiglie vengono prese e portate da gruppi a una singola linea continua.</p>
+                        <div class="short-card"></div>
+                    </div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-flex">
+                        <h2>Si raggruppa il prodotto finale</h2>
+                        <p>Le bottiglie vengono prese e portate da gruppi a una singola linea continua.</p>
+                        <div class="short-card"></div>
+                    </div>
+                    <div class="card card-img media-flex">
+                        <video autoplay muted loop>
+                            <source src="divisore.mp4" srcset="">
+                        </video>
+                    </div>
+                </div>
+                <div class="flex-content">
+                    <div class="text-flex">
+                        <h2>Viene preparata la spedizione</h2>
+                        <p>Le bottiglie vengono prese e portate da gruppi a una singola linea continua.</p>
+                        <div class="short-card"></div>
+                    </div>
+                    <div class="card card-img media-flex">
+                        <video autoplay muted loop>
+                            <source src="imballaggio.mp4" srcset="">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const menuItems = document.querySelectorAll(".sidebar-menu__link");
+
+        const navItems = document.querySelectorAll(".nav-item");
+
+        menuItems.forEach((menuItem) => {
+            menuItem.addEventListener("click", (e) => {
+                if (!e.target.classList.contains("active")) {
+                    document
+                        .querySelector(".sidebar-menu__link.active")
+                        .classList.remove("active");
+                    e.target.classList.add("active");
+                }
+            });
+        });
+
+        navItems.forEach((navItem) => {
+            navItem.addEventListener("click", (e) => {
+                if (!e.target.classList.contains("active")) {
+                    document.querySelector(".nav-item.active").classList.remove("active");
+                    e.target.classList.add("active");
+                }
+            });
+        });
+
+</script>
+</html>
